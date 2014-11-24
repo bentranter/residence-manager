@@ -18,6 +18,10 @@ Outline
   
 •	Requirement Gathering
 
+o	Functional
+
+o	Observation
+
 •	Requirement Analysis
 
 •	Requirement Reviewing

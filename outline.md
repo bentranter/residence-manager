@@ -1,4 +1,5 @@
 Outline
+
 •	Domain Analysis
   o	Introduction
   o	General Knowledge
@@ -7,7 +8,11 @@ Outline
   o	Tasks and Procedures
   o	Competing Software
   o	Similarities with Other Software
+  
 •	Requirement Gathering
+
 •	Requirement Analysis
+
 •	Requirement Reviewing
+
 •	Requirement Documents

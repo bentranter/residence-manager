@@ -6,6 +6,8 @@ The project is to create a residence management system.  The residence managemen
 
 Glossary
 
+LURMS – Lakehead University Residential Management System
+
 General knowledge about the domain
 
 We looked at other reservation systems, like video rental, library and other reservation systems.  Our project would be similar to those systems in theory.  We would need a user that can reserve by asking a manager for permission first before a reservation can be made.  Since, our users will need to pay for their rooms, we will need accurate personal information from the user.  The project will also need adequate security for the payment process.

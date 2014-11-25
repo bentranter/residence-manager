@@ -2,18 +2,18 @@
   <div class="post" {{attributes}}>
     <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
     <div class="post-content">
-      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a><span></span></h3>
       <h5>{{comment}}</h5>
       <span class="label label-primary">{{pluralize votes "Vote"}}</span>
       <span class="label label-success">By {{author}}</span>
       <a class="label label-info" href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
-      {{#if isAdmin}}
-        <span class="delete-post label label-danger">Delete</span>
-      {{/if}}
       {{#if ownPost}}
         <a class="label label-warning" href="{{pathFor 'postEdit'}}">Edit</a>
       {{/if}}
     </div>
     <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+    {{#if isAdmin}}
+      <button class="delete-post btn btn-danger">Delete</button>
+    {{/if}}
   </div>
 </template>

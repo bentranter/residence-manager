@@ -1,0 +1,11 @@
+<template name="singleResidence">
+  <div class="post">
+    <div class="post-content">
+      <h3><a href="{{pathFor 'singleResidence'}}">{{building}}</a><span></span></h3>
+      <h5>{{type}}</h5>
+      <p>{{beds}}</p>
+      <span class="label label-{{rentable}}">{{tenants}}/4</span> registered for this residence.
+    </div>
+    <button class="{{rentable}} discuss btn btn-default">Rent!</button>
+  </div>
+</template>

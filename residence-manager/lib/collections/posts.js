@@ -30,7 +30,7 @@ validatePost = function (post) {
     errors.comment = "Please add your comment!";
 
   return errors;
-}
+};
 
 Meteor.methods({
   postInsert: function(postAttributes) {
@@ -75,6 +75,22 @@ Meteor.methods({
     
     if (! affected)
       throw new Meteor.Error('invalid', "You weren't able to upvote that post");
+  },
+
+  rent: function(residenceId) {
+    check(this.userId, String);
+    check(residenceId, String);
+
+    var affected = Residences.update({
+      _id: residenceId,
+      tenantNames: {$ne: this.userId}
+    }, {
+      $addToSet: {tenantNames: this.userId},
+      $inc: {tenants: 1}
+    });
+    
+    if (! affected)
+      throw new Meteor.Error('invalid', "You were not able to register for that residence.");
   },
 
   delete: function(postId) {

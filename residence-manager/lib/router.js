@@ -77,6 +77,30 @@ Router.route('/posts/:_id/edit', {
 
 Router.route('/submit', {name: 'postSubmit'});
 
+Router.route('/residences', {
+  name: 'residences',
+  waitOn: function() {
+    return Meteor.subscribe('residences');
+  },
+  data: function() { return Residences.find({}); }
+});
+
+Router.route('residences/:_id', {
+  name: 'singleResidence',
+  waitOn: function() {
+    return Meteor.subscribe('singleResidence', this.params._id);
+  },
+  data: function() { return Residences.findOne(this.params._id); }
+});
+
+Router.route('/admin', {
+  name: 'admin',
+  waitOn: function() {
+    return Meteor.subscribe('admin');
+  },
+  data: function() { return Meteor.users.find({}); }
+});
+
 var requireLogin = function() {
   if (! Meteor.user()) {
     if (Meteor.loggingIn()) {
@@ -91,3 +115,4 @@ var requireLogin = function() {
 
 Router.onBeforeAction('dataNotFound', {only: 'postPage'});
 Router.onBeforeAction(requireLogin, {only: 'postSubmit'});
+Router.onBeforeAction(requireLogin, {only: 'residences'});

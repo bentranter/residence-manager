@@ -9,7 +9,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{pathFor 'home'}}">Residence Manager</a>
+      <a class="navbar-brand" href="{{pathFor 'home'}}">
+        <span class="logo">
+          <span class="logo-L">L</span>
+          <span class="logo-U">U</span>
+          <span class="logo-R">R</span>
+          <span class="logo-M">M</span>
+          <span class="logo-S">S</span>
+        </span>
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
@@ -20,11 +28,21 @@
           <a href="{{pathFor 'bestPosts'}}">Most Popular</a>
         </li>
         {{#if currentUser}}
+          <li class="{{activeRouteClass  'residences'}}">
+            <a href="{{pathFor 'residences'}}">Residences</a>
+          </li>
+        {{/if}}
+        {{#if currentUser}}
           <li class="{{activeRouteClass 'postSubmit'}}">
             <a href="{{pathFor 'postSubmit'}}">New Post</a>
           </li>
           <li class="dropdown">
             {{> notifications}}
+          </li>
+        {{/if}}
+        {{#if isAdmin}}
+          <li class="{{activeRouteClass 'admin'}}">
+            <a href="{{pathFor 'admin'}}">Admin</a>
           </li>
         {{/if}}
       </ul>

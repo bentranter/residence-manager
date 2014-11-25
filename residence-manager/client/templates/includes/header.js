@@ -4,9 +4,13 @@ Template.header.helpers({
     args.pop();
     
     var active = _.any(args, function(name) {
-      return Router.current() && Router.current().route.getName() === name
+      return Router.current() && Router.current().route.getName() === name;
     });
     
     return active && 'active';
+  },
+  isAdmin: function() {
+    if (Meteor.userId())
+      return Meteor.user().username == 'admin'; // If your username is admin, you have full priveleges. Not very secure
   }
 });

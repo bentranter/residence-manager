@@ -1179,6 +1179,26 @@ input[type="button"].btn-block {
   color: #ccc;
 }
 
+.logo-L {
+  color: #3EC0FF;
+}
+
+.logo-U {
+  color: #B83EFF;
+}
+
+.logo-R {
+  color: #FF3E78;
+}
+
+.logo-M {
+  color: #FF783E;
+}
+
+.logo-S {
+  color: #FFEE3E;
+}
+
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
   -webkit-border-radius: 3px;
@@ -1269,7 +1289,7 @@ input[type="button"].btn-block {
 .post .discuss {
   display: block;
   float: right;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 
 #signup-link {
@@ -1386,6 +1406,22 @@ input[type="button"].btn-block {
   }
 }
 
+.label-rentable {
+  background: #5cb85c;
+}
+
+.label-rented {
+  background: #d9534f;
+}
+
+.rented, .rented:hover, .rented:active, .rented:focus {
+  cursor: auto;
+  background: #A7A9AC;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
 .upvote {
   background: #efefef;
   color: #A7A9AC;
@@ -1416,6 +1452,13 @@ input[type="button"].btn-block {
 
 .comment-count:hover {
   color: #fff;
+}
+
+.delete-post {
+  display: block;
+  float: right;
+  margin-top: 10px;
+  margin-right: 15px;
 }
 
 .delete-post:hover {

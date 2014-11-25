@@ -11,7 +11,6 @@ Meteor.publish('singlePost', function(id) {
   return Posts.find(id);
 });
 
-
 Meteor.publish('comments', function(postId) {
   check(postId, String);
   return Comments.find({postId: postId});
@@ -19,4 +18,17 @@ Meteor.publish('comments', function(postId) {
 
 Meteor.publish('notifications', function() {
   return Notifications.find({userId: this.userId, read: false});
+});
+
+Meteor.publish('residences', function() {
+  return Residences.find({});
+});
+
+Meteor.publish('singleResidence', function(id) {
+  check(id, String);
+  return Residences.find(id);  
+});
+
+Meteor.publish('admin', function() {
+  return Meteor.users.find({});  
 });

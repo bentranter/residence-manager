@@ -18,11 +18,17 @@ Outline
   
 •	Requirement Gathering
 
-o	Functional
+  o	Functional
 
-o	Observation
+  o	Observation
 
 •	Requirement Analysis
+
+  o	Functional
+
+  o	Quality
+
+  o	Platform
 
 •	Requirement Reviewing
 

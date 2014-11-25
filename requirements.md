@@ -42,3 +42,17 @@ Observation
 
 I talked to some of the students that live in the residence about the procedure required to get a room at Lakehead University.  They said it wasn’t easy to navigate and had a hard time with the current reservation system.  They described the process.  The process was complicated and not very clear on what to do next.  However, the system did work.  The system took the students information, made a reservation and allowed the manager to approve the reservation.  The system was not user friendly, but database friendly.  Our system will need to be more user friendly and database friendly.
 
+Requirement Analysis
+
+Functional
+
+A manager should assign accommodations to students using this system.  A manager should easily find out info for each room of the residence, such as what kind of devices are provided in the room, who is living in each room and the duration, etc.  The manager can also post notifications, advertise activities, etc.
+
+Quality
+
+The quality of the system should be good.  A well put together system that allows full functionality with ease of use.  This will allow a user friendly design and ultimately a good user experience.  The system must have usability regardless of screen size and have accessibility for screen readers and other devices.  The system’s database must have fast queries and load times.  The system must have bug free.
+
+Platform
+
+Based on the requirements, the ideal platform for the client is the web. It is cross-platform (browsers work the same on Linux, Mac and PC, the software can be run on mobile devices through their web browsers or through an app containing an embedded implementation of a web browser (like WebKit).  For the server and database, the platform will be Ubuntu 14.04, with either Apache or Nginx for a component of the server, Node.js for the other component of the server, and (tentatively) CouchDB as the database.  This simply because Ubuntu 14.04 is available on a very cheap hosting plan, and is the most familiar with us. CouchDB was chosen because of its HTTP API and functionality with Hood.ie (part of our client-side stack).  Node.js was chosen because of its open source software ecosystem, ease of implementation, and familiarity with members of our team (if you know C, JavaScript is easy to learn).  More specifically, on the front-end we will be using a few tools.  The first two are NPM and Bower, which are simply package managers used to for dealing with dependencies in our project.  Another tool is Grunt, which is a JavaScript task runner.  This is used to run tests, compile files, etc.  Framework-wise, we're using Hood.ie, a front end tool for making web applications super simple.  For our style sheets, we'll be using SASS with Compass to speed things up nicely, and to take advantage of mixins (this'll help with rapid prototyping and Agile development). As of right now, we're undecided about whether or not to use a client side MVC like Ember or Angular, and plan to look into this further.
+

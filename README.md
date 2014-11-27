@@ -1,4 +1,8 @@
-Getting this up and running
+Source Code in action (interactive)
+
+http://meteorpad.com/pad/yGjuFQjiq3mYd248o/Residence-Manager
+
+Getting this up and running on your computer
 ============================
 
 Requirements: 
@@ -18,17 +22,14 @@ $ curl https://install.meteor.com/ | sh
 
 Now, clone or download a .zip of this entire project.
 
-Once this completes successfully, `cd` into the top of the cloned or unzipped directory (do something like this)
+Unfortuantely, you'll have to create a new Meteor project, and then copy the files into that project for this to work. This is super annoying. Run these bash commands from **the top of the cloned directory**:
 
 ```bash
-$ cd residence-manager
+$ meteor create residence-manager-test
+$ cd residence-manager-test
+$ rm residence-manager-test.html residence-manager-test.css residence-manager-test.js
+$ cd ..
+$ cp residence-manager/. residence-manager-test/ -R
+$ cd residence-manager-test && meteor
 ```
-
-From here, its as simple as running:
-
-```bash
-$ meteor
 ```
-
-This will download all packages required, and start your app on a local dev server. Go to `0.0.0.0:3000` in your browser to see the app running!
-

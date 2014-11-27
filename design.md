@@ -76,8 +76,6 @@ Let's consider two interactions and behaviours:
 
 Our user interface design was fairly simple, since the goal was to keep the interface clean, very fast, and adaptable for all screen sizes. Because of these requirements, our layout had to extremely simple. Each post, comment, or residence is layed out as a full width container filled with relevant content. The colour scheme simply follows Lakehead's colour scheme. 
 
-<<<<<<< HEAD
 Another thing we considered was the use of visual things like buttons. The primary actions are big bold buttons (see the Vote, Rent, Discuss, and Add Comment buttons). This makes it easier to identify the primary actions.
-=======
+
 Another thing we considered was the use of visual things like buttons. The primary actions are big bold buttons (see the Vote, Rent, Discuss, and Add Comment buttons). This makes it easier to identify the primary actions.
->>>>>>> FETCH_HEAD
